@@ -1,0 +1,101 @@
+*{
+  border: none;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+
+.modalContainer{
+ 
+  position: fixed;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.918);
+  color: white;
+  padding: 1.5rem;
+  width: 100%;
+  height: 100%;
+  /* display: none; */
+  top:0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transition: all 0.1s ease-out;
+
+}
+
+.modalPara{
+  width: 70%;
+  text-align: justify;
+  margin: 10px auto;
+  margin-bottom: 3rem;
+  
+}
+.modalBtn{
+  background-color: aqua;
+  font-size: 1rem;
+  padding: 10px;
+  border-radius: 10px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.modalOpen{
+  /* opacity: 1;
+  transform: translateY(0); 
+  */
+  animation: openModal 0.4s ease-out forwards;
+  
+}
+
+.modalClose{
+  /* opacity: 0;
+  transform: translateY(-100%);  */
+  animation: closeModal 0.4s ease-out forwards;
+
+ 
+}
+
+@keyframes openModal{
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+}
+50% {
+    opacity: 1;
+    transform: translateY(90%);
+}
+100% {
+    opacity: 1;
+    transform: translateY(0);
+}
+}
+
+@keyframes closeModal{
+
+
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+}
+50% {
+    opacity: 0.8;
+    transform: translateY(60%);
+}
+100% {
+    opacity: 0;
+    transform: translateY(-100%);
+}
+}
